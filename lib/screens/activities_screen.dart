@@ -59,11 +59,13 @@ class _ActivitiesScreenState extends State<ActivitiesScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: wordupAppBar(context, 'Actividades'),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      body: ListView(
+        padding: const EdgeInsets.symmetric(vertical: 24),
         children: [
           _activity('Flashcard', const FlashcardScreen()),
+          const SizedBox(height: 24),
           _activity('Significado', const MeaningScreen()),
+          const SizedBox(height: 24),
           _activity('Pronunciación', const PronunciationScreen()),
         ],
       ),
